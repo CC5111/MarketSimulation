@@ -36,7 +36,9 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
     case t:TakeOffer => {
       val oldSender = sender
       val userid = t.userId
+      println("envio el mensaje")
       (system.actorSelection(s"/user/market_$marketId/$userid") ? t).mapTo[String].map { message =>
+        println(message)
         oldSender ! message
       }
 

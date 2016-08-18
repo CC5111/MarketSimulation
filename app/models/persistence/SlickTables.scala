@@ -101,7 +101,7 @@ object SlickTables extends HasDatabaseConfig[JdbcProfile] {
 
   //
   class ProductsTable(tag: Tag) extends BaseTable[Product](tag, "products") {
-    def userId = column[Long]("wanted_user_id")
+    def userId = column[Long]("user_id")
     //  def user = foreignKey("wanted_user_k", userId, usersTableQ)(_.id, onUpdate=ForeignKeyAction.Restrict, onDelete=ForeignKeyAction.Cascade)
     def productTypeId = column[Long]("product_type_id")
     def productQuantity = column[Long]("product_quantity")

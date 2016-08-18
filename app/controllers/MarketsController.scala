@@ -26,7 +26,7 @@ class MarketsController @Inject()(userDAO: UserDAO,marketDAO: MarketDAO,offerDAO
     markets.:+(Market(0,n.toString,s"market $n"))
 
   }
-  lazy val initGetMarkets =Action.async{
+  val initGetMarkets =Action.async{
     marketDAO.all  map { re => re.foreach(m => initiateMarketActor(m.id))
 
 
@@ -64,6 +64,10 @@ class MarketsController @Inject()(userDAO: UserDAO,marketDAO: MarketDAO,offerDAO
 
   def getMarkets() = Action.async{
     marketDAO.all map { re => Ok(re.toString())}
+  }
+
+  def getTransactions() = Action.async{
+    transactionDAO.all map { re => Ok(re.toString())}
   }
 
 

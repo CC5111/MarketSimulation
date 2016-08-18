@@ -14,7 +14,7 @@ object MessagesActor {
     val userId: Long
   }
   case class TransactionSuccessfully(val userId: Long) extends TransactionCompleted
-  case class TransactionError(val userId: Long)
+  case class TransactionError(val userId: Long) extends TransactionCompleted
   case class Petition(userId: Long,otherProductId: Long, offer: Offer){
     val amount = offer.wantedAmount
     val productId = offer.wantedProductId

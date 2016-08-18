@@ -20,4 +20,5 @@ GET /markets controllers.MarketsController.getMarkets
 GET /testmarkets controllers.MarketsController.createTestMarkets
 GET /addMarket/:name/:desc controllers.MarketsController.addMarket(name: String, desc: String)
 GET /init   controllers.MarketsController.initGetMarkets
+GET /transactions   controllers.MarketsController.getTransactions
 GET /takeOffer/:marketId/:userId/:offerId controllers.MarketsController.takeOffer(marketId:Long,userId: Long, offerId: Long)

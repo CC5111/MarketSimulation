@@ -271,8 +271,12 @@ class MultipleDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvid
   def completeTransaction(product: Product, product2: Product, transaction: Transaction, offer: Offer): Future[Unit] = {
     val dbAction = (
       for {
-        product1 <- tableProduct.update(product)
-        product2 <- tableProduct.update(product2)
+        product1 <- {tableProduct.filter(_.id === product.id)
+          .map(x => (x.productQuantity))
+          .update(product.productQuantity)}
+        product3 <- {tableProduct.filter(_.id === product2.id)
+          .map(x => (x.productQuantity))
+          .update(product2.productQuantity)}
         offer <- tableOffer.filter(_.id.inSet(Seq(offer.id))).delete
         transaction <- tableTransaction returning tableTransaction.map(_.id) += transaction
       } yield ()

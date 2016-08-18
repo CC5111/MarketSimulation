@@ -1,5 +1,5 @@
-New log file opened at Sat Aug 06 22:06:58 CLT 2016 by 100160@DiBadas
-jvm 100160@DiBadas
+New log file opened at Wed Aug 17 22:30:52 CLT 2016 by 39676@DiBadas
+jvm 39676@DiBadas
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.91-b14
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\project, returning: (marketsimulation-build)
 Loading project definition from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@606a0536, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@748eaf51, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,65 +67,78 @@ Set current project to play-slick-rest (in build file:/C:/Users/Nicolas/Document
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@10252b40, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 06-08-2016 22:07:03
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@9db451b, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:30:56
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@76f4e8f1, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:07:03
+Running task... Cancel: sbt.server.ServerTaskCancellation@531935ab, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:30:56
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@4f77b321, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@68c0e834, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set()
+	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
+Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
 
-Total time: 0 s, completed 06-08-2016 22:07:04
+Read from stdout: Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 1b090f79, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	-classpath
+	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Read from stdout: there were 6 feature warnings; re-run with -feature for details
+there were 6 feature warnings; re-run with -feature for details
+Read from stdout: one warning found
+one warning found
+Scala compilation took 4.234249239 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 5 s, completed 17-08-2016 22:31:01
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@45416752, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:07:04
+Running task... Cancel: sbt.server.ServerTaskCancellation@3a9f7035, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:31:01
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@3c08be70, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@10b6c10e, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -142,30 +155,30 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 06-08-2016 22:07:04
+Total time: 1 s, completed 17-08-2016 22:31:02
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@11805799, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:07:46
+Running task... Cancel: sbt.server.ServerTaskCancellation@4b964015, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:31:08
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@57fd61d2, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:07:48
+Running task... Cancel: sbt.server.ServerTaskCancellation@48c0740a, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:31:10
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@3f0db3aa, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:07:49
+Running task... Cancel: sbt.server.ServerTaskCancellation@1f1eb379, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:31:11
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@4c02c4b6, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@74342718, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -189,12 +202,12 @@ Copy resource mappings:
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:08:17
+Total time: 1 s, completed 17-08-2016 22:31:32
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@66090b07, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@5568ae2d, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -218,12 +231,87 @@ Copy resource mappings:
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:08:20
+Total time: 1 s, completed 17-08-2016 22:31:35
 > server-post-command-cleanup
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@3b45e9c8, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@462a6741, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 232b42c3, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	-classpath
+	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Read from stdout: there were 6 feature warnings; re-run with -feature for details
+there were 6 feature warnings; re-run with -feature for details
+Read from stdout: one warning found
+one warning found
+Scala compilation took 1.399445365 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 17-08-2016 22:35:59
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@25243b14, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:36:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@5e5b3682, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:36:20
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@897a08c, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:36:22
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@2de672ae, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:36:23
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@765ff650, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -240,24 +328,266 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 06-08-2016 22:08:45
+Copy resource mappings: 
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 1 s, completed 17-08-2016 22:36:32
 > server-post-command-cleanup
 > server-handle-next-server-request
-> jobStop 1
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@3aebb428, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 1 s, completed 17-08-2016 22:36:35
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@2926b3b4, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 8178a49, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	-classpath
+	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Read from stdout: there were 6 feature warnings; re-run with -feature for details
+there were 6 feature warnings; re-run with -feature for details
+Read from stdout: one warning found
+one warning found
+Scala compilation took 1.232291631 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 17-08-2016 22:37:52
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 2
 Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@d1b4731, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:08:45
+Running task... Cancel: sbt.server.ServerTaskCancellation@48c507, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:38:22
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@2480d08e, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:08:45
+Running task... Cancel: sbt.server.ServerTaskCancellation@4e16f4b3, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:38:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@3898ba09, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:38:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@2a0446a5, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:38:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@488d95fa, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 1 s, completed 17-08-2016 22:38:58
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@645e21e9, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 1 s, completed 17-08-2016 22:39:02
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@2f384879, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
+
+Read from stdout: Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 34d15b62, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	-classpath
+	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Read from stdout: there were 6 feature warnings; re-run with -feature for details
+there were 6 feature warnings; re-run with -feature for details
+Read from stdout: one warning found
+one warning found
+Scala compilation took 1.100886036 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 17-08-2016 22:42:04
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@1edb6b20, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 17-08-2016 22:42:58
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 3
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@36506298, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:42:58
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@502f1cfa, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:42:58
 > server-post-command-cleanup
 > server-handle-next-server-request
 > test
 Evaluating tasks: test:test
-Running task... Cancel: sbt.server.ServerTaskCancellation@1f69b4e, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@2e8b653, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -303,8 +633,247 @@ Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
 Framework implementation 'org.specs2.runner.Specs2Framework' not present.
 Framework implementation 'org.specs2.runner.SpecsFramework' not present.
 Framework implementation 'org.specs.runner.SpecsFramework' not present.
-Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@5d3f02fd), (junit.framework.TestCase,false,com.novocode.junit.JUnit3Fingerprint@4c3b941b))
-Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@6475b550), (org.junit.runner.RunWith,false,com.novocode.junit.RunWithFingerprint@747e7e89), (org.junit.Test,false,com.novocode.junit.JUnitFingerprint@7682ece1))
+Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@4f7cae6d), (junit.framework.TestCase,false,com.novocode.junit.JUnit3Fingerprint@4b24fc23))
+Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@19d57a24), (org.junit.runner.RunWith,false,com.novocode.junit.RunWithFingerprint@75fc48d9), (org.junit.Test,false,com.novocode.junit.JUnitFingerprint@2383f8d))
+Forking tests - parallelism = false
+Create a single-thread test executor
+Runner for org.scalatest.tools.Framework produced 1 initial tasks for 1 tests.
+  Running TaskDef(ApplicationSpec, sbt.ForkMain$SubclassFingerscan@412b5cb0, false, [SuiteSelector])
+Read from stdout: ApplicationSpec:
+ApplicationSpec:
+Read from stdout: Routes
+Routes
+Read from stdout: - should send 404 on a bad request
+- should send 404 on a bad request
+    Produced 0 nested tasks and 1 events.
+Runner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.
+Read from stdout: ScalaTest
+ScalaTest
+Read from stdout: Run completed in 3 seconds, 854 milliseconds.
+Read from stdout: Total number of tests run: 1
+Read from stdout: Suites: completed 1, aborted 0
+Read from stdout: Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
+Read from stdout: All tests passed.
+Run completed in 3 seconds, 854 milliseconds.
+Total number of tests run: 1
+Suites: completed 1, aborted 0
+Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
+All tests passed.
+Summary for JUnit not available.
+Read from stdout: Passed: Total 1, Failed 0, Errors 0, Passed 1
+Passed: Total 1, Failed 0, Errors 0, Passed 1
+Passed tests:
+	ApplicationSpec
+Total time: 5 s, completed 17-08-2016 22:43:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@4460592c, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:43:03
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@5b23d3d6, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:43:05
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6d000f81, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 1 s, completed 17-08-2016 22:43:13
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@3ea9e4f8, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 1 s, completed 17-08-2016 22:43:17
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@553d87ce, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\RoutesPrefix.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\RoutesPrefix.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\RoutesPrefix.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
+
+Read from stdout: Compiling 5 Scala sources and 1 Java source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Compiling 5 Scala sources and 1 Java source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 79df0a4f, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	-classpath
+	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
+Scala compilation took 3.084235916 s
+Attempting to call com.sun.tools.javac.api.JavacTool@4cee3b18 directly...
+Java compilation took 1.006533252 s
+Java analysis took 0.067532898 s
+Java compile + analysis took 1.104903096 s
+Invalidating C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala...
+Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala)
+The C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala source file has the following regular definitions changed:
+	getTransactions.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java
+Invalidating C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala...
+Invalidating (transitively) by inheritance from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala...
+Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
+The C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala source file has the following regular definitions changed:
+	getTransactions.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala: Set(getTransactions)
+Invalidating C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala...
+Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala)
+The C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala source file has the following regular definitions changed:
+	getTransactions.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java
+New invalidations:
+	Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
+Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 5 s, completed 17-08-2016 22:54:06
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 4
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@55f5ea81, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:54:06
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@37000394, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:54:06
+> server-post-command-cleanup
+> server-handle-next-server-request
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@5aafe7ac, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@101d7686), (junit.framework.TestCase,false,com.novocode.junit.JUnit3Fingerprint@571891af))
+Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@f74fe02), (org.junit.runner.RunWith,false,com.novocode.junit.RunWithFingerprint@5890eb27), (org.junit.Test,false,com.novocode.junit.JUnitFingerprint@23421ff5))
 Forking tests - parallelism = false
 Create a single-thread test executor
 Runner for org.scalatest.tools.Framework produced 1 initial tasks for 1 tests.
@@ -319,12 +888,12 @@ Read from stdout: - should send 404 on a bad request
 Runner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.
 Read from stdout: ScalaTest
 ScalaTest
-Read from stdout: Run completed in 3 seconds, 609 milliseconds.
+Read from stdout: Run completed in 3 seconds, 943 milliseconds.
 Read from stdout: Total number of tests run: 1
 Read from stdout: Suites: completed 1, aborted 0
 Read from stdout: Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
 Read from stdout: All tests passed.
-Run completed in 3 seconds, 609 milliseconds.
+Run completed in 3 seconds, 943 milliseconds.
 Total number of tests run: 1
 Suites: completed 1, aborted 0
 Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
@@ -334,24 +903,24 @@ Read from stdout: Passed: Total 1, Failed 0, Errors 0, Passed 1
 Passed: Total 1, Failed 0, Errors 0, Passed 1
 Passed tests:
 	ApplicationSpec
-Total time: 5 s, completed 06-08-2016 22:08:50
+Total time: 5 s, completed 17-08-2016 22:54:11
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@2fff248d, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:08:51
+Running task... Cancel: sbt.server.ServerTaskCancellation@718898e5, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:54:11
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@7facc63a, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:08:52
+Running task... Cancel: sbt.server.ServerTaskCancellation@506f4426, check cycles: false
+Total time: 0 s, completed 17-08-2016 22:54:12
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@82d34dc, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@7838caac, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -375,12 +944,12 @@ Copy resource mappings:
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:09:14
+Total time: 1 s, completed 17-08-2016 22:54:28
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@77d7fceb, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@559f0eed, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -404,555 +973,6 @@ Copy resource mappings:
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
 	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:09:18
+Total time: 1 s, completed 17-08-2016 22:54:31
 > server-post-command-cleanup
 > server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@3d83b57e, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala)
-
-Read from stdout: Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 5f47c4d6, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Scala compilation took 3.035966676 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 3 s, completed 06-08-2016 22:11:38
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 2
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@5690150c, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:11:38
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@15b941a1, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:11:38
-> server-post-command-cleanup
-> server-handle-next-server-request
-> test
-Evaluating tasks: test:test
-Running task... Cancel: sbt.server.ServerTaskCancellation@3c5ca8c0, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	
-Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
-Framework implementation 'org.specs2.runner.Specs2Framework' not present.
-Framework implementation 'org.specs2.runner.SpecsFramework' not present.
-Framework implementation 'org.specs.runner.SpecsFramework' not present.
-Subclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@2e488531), (junit.framework.TestCase,false,com.novocode.junit.JUnit3Fingerprint@61d63512))
-Annotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@70138aeb), (org.junit.runner.RunWith,false,com.novocode.junit.RunWithFingerprint@77a63752), (org.junit.Test,false,com.novocode.junit.JUnitFingerprint@1dad459a))
-Forking tests - parallelism = false
-Create a single-thread test executor
-Runner for org.scalatest.tools.Framework produced 1 initial tasks for 1 tests.
-  Running TaskDef(ApplicationSpec, sbt.ForkMain$SubclassFingerscan@53294095, false, [SuiteSelector])
-Read from stdout: ApplicationSpec:
-ApplicationSpec:
-Read from stdout: Routes
-Routes
-Read from stdout: - should send 404 on a bad request
-- should send 404 on a bad request
-    Produced 0 nested tasks and 1 events.
-Runner for com.novocode.junit.JUnitFramework produced 0 initial tasks for 0 tests.
-Read from stdout: ScalaTest
-ScalaTest
-Read from stdout: Run completed in 3 seconds, 696 milliseconds.
-Read from stdout: Total number of tests run: 1
-Read from stdout: Suites: completed 1, aborted 0
-Read from stdout: Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
-Read from stdout: All tests passed.
-Run completed in 3 seconds, 696 milliseconds.
-Total number of tests run: 1
-Suites: completed 1, aborted 0
-Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
-All tests passed.
-Summary for JUnit not available.
-Read from stdout: Passed: Total 1, Failed 0, Errors 0, Passed 1
-Passed: Total 1, Failed 0, Errors 0, Passed 1
-Passed tests:
-	ApplicationSpec
-Total time: 5 s, completed 06-08-2016 22:11:42
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@57cbf7d2, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:11:43
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@6c981619, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:11:44
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@25fbf7f5, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:11:45
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@3bb3bed9, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:11:48
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 3
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@3133b86f, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:12:22
-> server-post-command-cleanup
-> server-handle-next-server-request
-> backgroundRun
-Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@32734f95, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:12:38
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkConfig
-Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@24791ac7, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:12:39
-> server-post-command-cleanup
-> server-handle-next-server-request
-> root/playForkNotifyStart http://localhost:9000
-Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@709421cf, check cycles: false
-Total time: 0 s, completed 06-08-2016 22:12:41
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@5cf48202, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:12:43
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@6b464dc5, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\application.conf,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\application.conf)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\logback.xml,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\logback.xml)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\routes,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\routes)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\conf\evolutions\default\1.sql,C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 06-08-2016 22:12:47
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@36dad3e, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-
-Read from stdout: Compiling 3 Scala sources to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Compiling 3 Scala sources to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 33f91329, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Read from stdout: C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala:41: could not find implicit value for parameter timeout: akka.util.Timeout
-C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala:41: could not find implicit value for parameter timeout: akka.util.Timeout
-Read from stdout: (system.actorSelection(s"/user/market_$marketId") ? TakeOffer(marketId,userId,offerId)).mapTo[String].map { message =>
-    (system.actorSelection(s"/user/market_$marketId") ? TakeOffer(marketId,userId,offerId)).mapTo[String].map { message =>
-Read from stdout: ^
-                                                      ^
-Read from stdout: one error found
-one error found
-Compilation failed (CompilerInterface)
-Read from stdout: (compile:compileIncremental) Compilation failed
-(compile:compileIncremental) Compilation failed
-Total time: 2 s, completed 06-08-2016 23:00:03
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> compile
-Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@6d08e3a8, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-
-Read from stdout: Compiling 3 Scala sources to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Compiling 3 Scala sources to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler d42a91, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Scala compilation took 3.197383869 s
-Invalidating C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala...
-Invalidating (transitively) by inheritance from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala...
-Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala)
-The C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\messages\MessagesActor.scala source file has the following regular definitions changed:
-	unapply, curried, tupled, marketId, <init>, apply, TakeOffer, copy$default$3, copy.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala: Set(marketId, <init>, apply, TakeOffer)
-The following modified names cause invalidation of C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala: Set(marketId, <init>, apply, TakeOffer)
-The following modified names cause invalidation of C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala: Set(<init>, apply)
-Invalidating C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala...
-Invalidating (transitively) by inheritance from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala...
-Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-The C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala source file has the following implicit definitions changed:
-	timeout.
-All member reference dependencies will be considered within this context.
-The following member ref dependencies of C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala are invalidated:
-	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala
-New invalidations:
-	Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
-Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
-Including C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala by C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\MarketActor.scala
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\controllers\MarketsController.scala)
-All newly invalidated sources after taking into account (previously) recompiled sources:Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\app\actors\UserActor.scala)
-Read from stdout: Compiling 4 Scala sources to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Compiling 4 Scala sources to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 1a5c70fa, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Read from stdout: there were 5 feature warnings; re-run with -feature for details
-there were 5 feature warnings; re-run with -feature for details
-Read from stdout: one warning found
-one warning found
-Scala compilation took 2.878035975 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 7 s, completed 06-08-2016 23:00:40
-> server-post-command-cleanup
-> server-handle-next-server-request
-> jobStop 4
-Evaluating tasks: *:jobStop
-Running task... Cancel: sbt.server.ServerTaskCancellation@40fc8f24, check cycles: false
-Total time: 0 s, completed 06-08-2016 23:00:52
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@700e4ad8, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\RoutesPrefix.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\RoutesPrefix.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\RoutesPrefix.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\router\Routes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
-
-Read from stdout: Compiling 4 Scala sources and 1 Java source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Compiling 4 Scala sources and 1 Java source to C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 140ccded, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_91\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_91\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_91\jre\classes;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
-	-classpath
-	C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\classes;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.11\1.1.1\jars\twirl-api_2.11.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.2.jar;C:\Users\Nicolas\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.16.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.0.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\org.reactivestreams\reactive-streams\1.0.0\jars\reactive-streams.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.2.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-akka_2.11\bundles\ssl-config-akka_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.1.3.jar;C:\Users\Nicolas\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.2.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\Nicolas\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Nicolas\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Nicolas\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\Users\Nicolas\Desktop\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\Users\Nicolas\Desktop\scalparo\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.2.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.33.Final-linux-x86_64.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.4.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick_2.11\jars\play-slick_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick_2.11\bundles\slick_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.slick\slick-hikaricp_2.11\bundles\slick-hikaricp_2.11-3.1.0.jar;C:\Users\Nicolas\.ivy2\cache\com.zaxxer\HikariCP-java6\bundles\HikariCP-java6-2.3.7.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-slick-evolutions_2.11\jars\play-slick-evolutions_2.11-1.1.1.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.h2database\h2\jars\h2-1.4.191.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.11.jar;C:\Users\Nicolas\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.5.0.jar;C:\Users\Nicolas\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\async-http-client\jars\async-http-client-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.34.Final.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver-dns\jars\netty-resolver-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-resolver\jars\netty-resolver-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.asynchttpclient\netty-codec-dns\jars\netty-codec-dns-2.0.0-RC9.jar;C:\Users\Nicolas\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.20.0-GA.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Nicolas\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar
-Scala compilation took 2.023197481 s
-Attempting to call com.sun.tools.javac.api.JavacTool@16bd0400 directly...
-Java compilation took 0.653053088 s
-Java analysis took 0.049598414 s
-Java compile + analysis took 0.721375601 s
-Invalidating C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala...
-Invalidating (transitively) by inheritance from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala...
-Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala)
-The C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\ReverseRoutes.scala source file has the following regular definitions changed:
-	takeOffer.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java
-Invalidating C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala...
-Invalidating (transitively) by inheritance from C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala...
-Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala)
-The C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala source file has the following regular definitions changed:
-	takeOffer.
-All member reference dependencies will be considered within this context.
-Name hashing optimization doesn't apply to non-Scala dependency: C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java
-New invalidations:
-	Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
-Initial set of included nodes: Set(C:\Users\Nicolas\Documents\ScalaRamo\MarketSimulation\target\scala-2.11\routes\main\controllers\routes.java)
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 4 s, completed 06-08-2016 23:02:13
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@69bf4a87, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 0 s, completed 06-08-2016 23:02:13
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Nicolas/Documents/ScalaRamo/MarketSimulation/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@2f5a300b, check cycles: false
-Total time: 0 s, completed 06-08-2016 23:02:13
-> server-post-command-cleanup
-> server-handle-next-server-request
-Done executing sbt server engine, result Right(Exit(0))
-Closing listening server socket
-Waiting for socket thread
-Waiting for request processor thread
-Waiting for command engine result
-Returning control to sbt launcher with result Exit(0)
-Closing the 100160@DiBadas logs at Sat Aug 06 23:02:13 CLT 2016, goodbye.
