@@ -3792,3 +3792,7 @@ Sending msg to client activator-f4e59a8b-b010-418a-885e-c588658db3ad: Background
 Sending msg to client activator-f4e59a8b-b010-418a-885e-c588658db3ad: BackgroundJobLogEvent(33,LogMessage(info,me shego la oferta))
 Sending msg to client activator-f4e59a8b-b010-418a-885e-c588658db3ad: BackgroundJobLogEvent(33,LogMessage(info,encontre el producto del usuario))
 Sending msg to client activator-f4e59a8b-b010-418a-885e-c588658db3ad: BackgroundJobLogEvent(33,LogMessage(info,YEAAAAAH TransactionError(1,No tienes suficiente producto)))
+Client activator-f4e59a8b-b010-418a-885e-c588658db3ad closed, java.net.SocketException: Connection reset, shutting down
+Stopping client.
+Client activator-f4e59a8b-b010-418a-885e-c588658db3ad thread exiting.
+Dropping message (0,ReceivedResponse()) to dead client activator-f4e59a8b-b010-418a-885e-c588658db3ad
