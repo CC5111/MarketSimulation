@@ -22,6 +22,7 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
 
   implicit val timeout: Timeout = 10.seconds
   println(self.path)
+  var bienestarTotal = 0
   val initUsers ={
     println("init busqueda de actors hijos")
     userDAO.byMarket(marketId).onSuccess{
@@ -36,26 +37,16 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
 
   }
 
-  def calculateBienestar(products: Seq[Product]):Double={
-    var totalsum =0.0
-    products.foreach(
-    product =>
-      totalsum += product.productConstant*Math.pow(product.productQuantity,product.productExponential)
-
-    )
-    totalsum
-  }
-
-  def sendAllBienestar()= {
+  def calculateAllBienestar()= {
     productDAO.all map{ x =>
-      var sumatory = 0.0
+      var sumatory = 0
       x.groupBy{_.id}.foreach( each =>
-      sumatory+= calculateBienestar(each._2)
+      sumatory+= calculateBienestar
       )
-      context.actorSelection("/user/*/flowActor")! sumatory
-
     }
 
+
+    }
 
   }
 
@@ -67,9 +58,9 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
       (system.actorSelection(s"/user/market_$marketId/$userid") ? t).mapTo[Any].map { message =>
         println("YEAAAAAH " + message.toString)
         oldSender ! (message match {
-          case v:TransactionSuccessfully=>{
-             sendAllBienestar()
-            Json.obj("status" ->"OK"  )}
+          case v:TransactionSuccessfully=>
+            system.actorSelection(s"/user/market_$marketId/graph") ! calculateAllBienestar()
+            Json.obj("status" ->"OK"  )
           case v:TransactionError =>
             Json.obj("status" ->"KO","error" ->v.error)
           })

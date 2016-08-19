@@ -136,8 +136,6 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
       }
     }
     case p:Petition =>
-      println(this.userId)
-      println("me shego una petition")
       val thesender = sender();
       thesender ! processPetition(p)
 
@@ -152,48 +150,32 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
 
 
     case v:TransactionCompleted => //Me llego un mensaje diciendo que la transaccion se termino de forma correcta, por lo tanto proceso los mensajes anteriores de ofertas
-      println(this.userId)
       unbecome()
       unstashAll()
       if(v.userId == offerSender._1){
-
         val userid = v.userId
-        println(s"user: $userid")
-        println(takeOfferSender.toString())
-        //pipe(Future("hola!")) to  takeOfferSender
         takeOfferSender ! v
-
       }
       else{
         val userid = v.userId
         println(s"err user: $userid")
       }
     case d:DeadUser => //Usuario murio, proceso los mensajes anteriores
-      println(this.userId)
       if(d.userId == offerSender._1){
         unbecome()
         unstashAll()
-
         offerSender._2 ! "Error"
       }
       else{
         context.parent ! "error deadleter?"
       }
     case out:TimeOutMsg =>
-      println(this.userId)
-      println("unbecome")
       unbecome()
       unstashAll()
-
       offerSender._2 ! "TimeOut"
-
-
     case v:TakeOffer => //
-      println(this.userId)
-      println("Estoy procesando una oferta, por lo tanto no puedo recibir mensajes")
       stash()
     case p:Petition => //Idem anterior
-      println(this.userId)
       stash()
     case msg=>
      matchThis(msg,sender)
