@@ -124,6 +124,7 @@ abstract class  BaseDAO[T <: BaseTable[A], A <: BaseEntity]() extends AbstractBa
     def insert(rows : Seq[Market]): Future[Seq[Long]] ={
       db.run(tableQ returning tableQ.map(_.id) ++= rows.filter(_.isValid))
     }
+
   }
 
   @Singleton
@@ -147,6 +148,9 @@ abstract class  BaseDAO[T <: BaseTable[A], A <: BaseEntity]() extends AbstractBa
     def byId(id: Long): Future[Option[Offer]] = {
       db.run(tableQ.filter(_.id === id).result.headOption)
     }
+    def byMarket(marketId: Long): Future[Seq[Offer]] = {
+      db.run(tableQ.filter(_.marketId === marketId).result)
+    }
   }
   @Singleton
   class ProductDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) {
@@ -169,7 +173,13 @@ abstract class  BaseDAO[T <: BaseTable[A], A <: BaseEntity]() extends AbstractBa
     def byId(id: Long): Future[Option[Product]] = {
       db.run(tableQ.filter(_.id === id).result.headOption)
     }
-
+    def byUser(userId: Long): Future[Seq[Product]] = {
+      db.run(tableQ.filter(_.userId === userId).result)
+    }
+    def byUserIdAndProductTypeId(userId: Long, pTypeId: Long): Future[Option[Product]] = {
+      db.run(tableQ.filter(x=>{
+        x.userId === userId}).filter(_.productTypeId === pTypeId).result.headOption)
+    }
 
   }
 
@@ -268,16 +278,24 @@ class MultipleDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvid
 
 
 
-  def completeTransaction(product: Product, product2: Product, transaction: Transaction, offer: Offer): Future[Unit] = {
+  def completeTransaction(product: Product, product2: Product,product3: Product,product4: Product, transaction: Transaction, offer: Offer): Future[Unit] = {
+    println(s"product:$product product2:$product2")
     val dbAction = (
       for {
-        product1 <- {tableProduct.filter(_.id === product.id)
+        productA <- {tableProduct.filter(_.id === product.id)
           .map(x => (x.productQuantity))
           .update(product.productQuantity)}
-        product3 <- {tableProduct.filter(_.id === product2.id)
+        productB <- {tableProduct.filter(_.id === product2.id)
           .map(x => (x.productQuantity))
           .update(product2.productQuantity)}
-        offer <- tableOffer.filter(_.id.inSet(Seq(offer.id))).delete
+        productC <- {tableProduct.filter(_.id === product3.id)
+          .map(x => (x.productQuantity))
+          .update(product3.productQuantity)}
+        productD <- {tableProduct.filter(_.id === product4.id)
+          .map(x => (x.productQuantity))
+          .update(product4.productQuantity)}
+        offer <- tableOffer.filter(_.wantedUserId=== product2.userId).delete
+        offer3 <- tableOffer.filter(_.wantedUserId=== product.userId).delete
         transaction <- tableTransaction returning tableTransaction.map(_.id) += transaction
       } yield ()
       ).transactionally

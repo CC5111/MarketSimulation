@@ -4,7 +4,7 @@ import javax.inject._
 
 
 import actors.MarketActor
-import actors.messages.MessagesActor.TakeOffer
+import actors.messages.MessagesActor.{GetProducts, CreateOffer, GetAllOffers, TakeOffer}
 import akka.actor.ActorSystem
 import models.daos._
 import models.entities.{User, Market, Supplier}
@@ -15,7 +15,7 @@ import play.api.mvc._
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class MarketsController @Inject()(userDAO: UserDAO,marketDAO: MarketDAO,offerDAO: OfferDAO,productDAO: ProductDAO, productTypeDAO: ProductTypeDAO, transactionDAO: TransactionDAO,multipleDAO: MultipleDAO)(implicit ec: ExecutionContext, system: ActorSystem, mat: akka.stream.Materializer) extends Controller {
+class MarketsController @Inject()(userDAO: UserDAO,marketDAO: MarketDAO,offerDAO: OfferDAO,productDAO: ProductDAO, productTypeDAO: ProductTypeDAO, transactionDAO: TransactionDAO,multipleDAO: MultipleDAO)(implicit ec: ExecutionContext, system: ActorSystem, mat: akka.stream.Materializer) extends Controller{
 
   import akka.pattern.ask
   import scala.concurrent.duration._
@@ -39,11 +39,12 @@ class MarketsController @Inject()(userDAO: UserDAO,marketDAO: MarketDAO,offerDAO
     system.actorOf(MarketActor.props(id,name,userDAO,offerDAO,productDAO,transactionDAO,multipleDAO), name)
   }
   def takeOffer(marketId: Long, userId: Long, offerId : Long)=Action.async{
-    (system.actorSelection(s"/user/market_$marketId") ? TakeOffer(marketId,userId,offerId)).mapTo[String].map { message =>
-      Ok(message)
+    (system.actorSelection(s"/user/market_$marketId") ? TakeOffer(marketId,userId,offerId)).mapTo[JsValue].map { message =>
+      Ok(message.toString)
     }
 
   }
+
 
   def addMarket(market: Market)=Action.async{
       //val newMarket = Market(0,name,desc)
@@ -62,14 +63,32 @@ class MarketsController @Inject()(userDAO: UserDAO,marketDAO: MarketDAO,offerDAO
 
   def createTestMarkets()= Action.async(marketDAO.insert(markets)  map { re => Ok( re.toString())})
 
-  def getMarkets() = Action.async{
+  def getMarkets = Action.async{
     marketDAO.all map { re => Ok(re.toString())}
   }
 
-  def getTransactions() = Action.async{
+  def getTransactions = Action.async{
     transactionDAO.all map { re => Ok(re.toString())}
   }
-
-
+  def getOffers(marketId: Long) = Action.async{
+    (system.actorSelection(s"/user/market_$marketId") ? GetAllOffers(marketId)).mapTo[JsValue].map { message =>
+      Ok(message)
+    }}
+  //(userId: Long,marketId: Long, wantsProductId: Long, wantsAmount: Long, ownerUserId: Long, givesProductId: Long, givesAmount: Long)
+  def createOffer(userId: Long, marketId: Long, wantsProductId: Long, wantsAmount: Long, givesProductId: Long, givesAmount: Long)=
+  {
+    println(s"create: gives $givesProductId")
+    val create =CreateOffer(userId,marketId,wantsProductId,wantsAmount,givesProductId,givesAmount)
+    Action.async {
+      (system.actorSelection(s"/user/market_$marketId") ? create).mapTo[JsValue].map { message =>
+        Ok(message)
+      }
+    }
+  }
+  def getProducts(userId: Long,marketId: Long)= Action.async{
+    (system.actorSelection(s"/user/market_$marketId") ? GetProducts(userId)).mapTo[JsValue].map { message =>
+      Ok(message)
+    }
+  }
 
 }

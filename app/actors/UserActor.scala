@@ -6,9 +6,11 @@ import actors.messages.MessagesActor._
 import models.daos.{MultipleDAO, TransactionDAO, ProductDAO, OfferDAO}
 import models.entities._
 import akka.actor.Props
+import play.api.libs.json.Json
 import scala.concurrent.duration._
 import akka.util.Timeout
 import akka.pattern.pipe
+import utilities.EconomyMath
 
 
 import scala.concurrent.{Future, Await}
@@ -32,21 +34,22 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
   def processOffer(o: Offer) ={
     println("me shego la oferta")
     val otherUserId= o.wantedUserId
-    val product = Await.result(getUserProduct(o.offProductId),1000 milli)
+    val product = Await.result(getUserProduct(userId,o.offProductId),1000 milli)
     println("encontre el producto del usuario")
     if(product.productQuantity >= o.offAmount){
+      become(waitingResponse)
       println(s"el usuario tiene produsto $otherUserId")
       println (context.actorSelection(s"../$otherUserId").toString())
       context.actorSelection(s"../$otherUserId") ! Petition(userId,o.offProductId,o)
 
     }
     else{
-      "No tiene suficiente producto el usuario"
+      takeOfferSender ! TransactionError(userId,"No tienes suficiente producto")
     }
 
   }
 
-  def getUserProduct(id: Long)={ productDAO.byId(id).flatMap{
+  def getUserProduct(id: Long, pTypeId: Long)={ productDAO.byUserIdAndProductTypeId(id,pTypeId).flatMap{
     case Some(room) => Future(room)
 
     case _ => Future(null)
@@ -56,30 +59,62 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
 
   def processPetition(p: Petition):TransactionCompleted ={
     println("intento de obtener el producto de este user")
-    val product= Await.result(getUserProduct(p.productId),1000 milli)
+    val user1product= Await.result(getUserProduct(p.userId,p.offer.offProductId),1000 milli)
+    val user1otherProduct= Await.result(getUserProduct(p.userId,p.offer.wantedProductId),1000 milli)
     println("intento de obtener el producto del otro user")
-    val otherProduct = Await.result(getUserProduct(p.otherProductId),1000 milli)
-    if(product.productQuantity >= p.amount){
+    val user2product =  Await.result(getUserProduct(userId,p.offer.offProductId),1000 milli)
+    val user2otherProduct = Await.result(getUserProduct(userId,p.offer.wantedProductId),1000 milli)
+    if(user1otherProduct == null | user1product == null |user2otherProduct == null | user2product == null){
+      TransactionError(p.offer.wantedUserId,"Algun usuario no tiene un tipo de producto")
+    }
+    println(user2otherProduct)
+    if(user2otherProduct.productQuantity >= p.amount){
       println("el user tiene la cantidad buena")
-            val product1 = product.copy(productQuantity = product.productQuantity - p.amount)
-            val product2 = otherProduct.copy(productQuantity = otherProduct.productQuantity - p.offer.offAmount)
-            val newTransaction = Transaction(0,"test",p.userId,p.offer.offProductId,p.offer.offAmount,0.0,this.userId,p.offer.wantedProductId,p.offer.wantedAmount,0.0)
-            Await.result(multipleDAO.completeTransaction(product1,product2,newTransaction,p.offer).map{re =>  TransactionSuccessfully(p.offer.wantedUserId)},1000 milli)
+            val product1 = user1product.copy(productQuantity = user1product.productQuantity - p.offer.offAmount)
+            val product2 = user2otherProduct.copy(productQuantity = user2otherProduct.productQuantity - p.amount)
+            val product3 = user2product.copy(productQuantity = user2product.productQuantity + p.offer.offAmount)
+            val product4 = user1otherProduct.copy(productQuantity = user1otherProduct.productQuantity + p.amount)
+
+            val newTransaction = Transaction(0,"test",p.userId,p.offer.offProductId,p.offer.offAmount,EconomyMath.RMS(product1,product4),this.userId,p.offer.wantedProductId,p.offer.wantedAmount,EconomyMath.RMS(product3,product2))
+            Await.result(multipleDAO.completeTransaction(product1,product2,product3,product4,newTransaction,p.offer).map{re =>  TransactionSuccessfully(p.offer.wantedUserId)},1000 milli)
     }
     else{
       println("el user no tiene cantidad deseada")
-      TransactionError(p.offer.wantedUserId)
+      TransactionError(p.offer.wantedUserId,"el user no tiene cantidad deseada")
     }
 
   }
 
-  def matchThis(msg: Any) = msg match{
-    case _ => "TODO"
-    /*case CreateOffer =>
-    case DeleteOffer =>
-    case GetBienestar =>
-    case GetUtilidadMarginal =>*/
+  def matchThis(msg: Any,theSender: ActorRef) = msg match{
+    case c:CreateOffer => {
+      println(c.userId+ "  "+ c.givesProductId )
+      val offer = Offer(0, c.marketId, c.wantsProductId, c.wantsAmount, c.userId, c.givesProductId, c.givesAmount)
+      val product = Await.result(getUserProduct(c.userId,c.givesProductId), 1000 milli)
+      println("encontre el producto del usuario")
+      if (product.productQuantity >= c.givesAmount) {
+        offerDAO.insert(offer).onSuccess {
+          case o: Long => {
+            println("Yea")
+            theSender ! OfferCreationOK(offer)
+          }
+          case _ =>
+            theSender ! OfferCreationError("Error al crear oferta")
+        }
+
+      }
+      else {
+        theSender ! OfferCreationError("Producto insuficiente")
+      }
+    }
+    case p:GetProducts =>{
+      println("GetProducts")
+      productDAO.byUser(userId) map {r => theSender ! r
+
+      }}
+    case _=>
+
   }
+
 
   var takeOfferSender:ActorRef = null
 
@@ -87,27 +122,27 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
     case tOffer:TakeOffer =>
     {
        val offer = Await.result(getOffer(tOffer.offerId),1000 milli)
+      println(this.userId)
       offer match{
         case Some(o) => //Existia esta oferta
           offerSender = (o.wantedUserId,sender)
           takeOfferSender = sender();
-          become(waitingResponse)
           system.scheduler.scheduleOnce(5000 milliseconds) {
             self ! TimeOutMsg()
           }
-          sender ! processOffer(o)
-        case None => sender ! "No existe oferta"
+          processOffer(o)
+        case None => sender ! TransactionError(userId,"No existe oferta")
 
       }
     }
     case p:Petition =>
+      println(this.userId)
       println("me shego una petition")
       val thesender = sender();
       thesender ! processPetition(p)
 
     case msg =>
-      print("become ")
-      println(msg.toString)
+      matchThis(msg,sender)
 
 
 
@@ -117,23 +152,24 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
 
 
     case v:TransactionCompleted => //Me llego un mensaje diciendo que la transaccion se termino de forma correcta, por lo tanto proceso los mensajes anteriores de ofertas
+      println(this.userId)
+      unbecome()
+      unstashAll()
       if(v.userId == offerSender._1){
-        unbecome()
-        unstashAll()
+
         val userid = v.userId
         println(s"user: $userid")
         println(takeOfferSender.toString())
-        pipe(Future("hola!")) to  context.parent
-        context.parent ! "hola"
+        //pipe(Future("hola!")) to  takeOfferSender
+        takeOfferSender ! v
 
       }
       else{
         val userid = v.userId
         println(s"err user: $userid")
-        pipe(Future("hola!")) to  context.parent
-        context.parent ! "hola"
       }
     case d:DeadUser => //Usuario murio, proceso los mensajes anteriores
+      println(this.userId)
       if(d.userId == offerSender._1){
         unbecome()
         unstashAll()
@@ -144,6 +180,7 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
         context.parent ! "error deadleter?"
       }
     case out:TimeOutMsg =>
+      println(this.userId)
       println("unbecome")
       unbecome()
       unstashAll()
@@ -152,16 +189,14 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
 
 
     case v:TakeOffer => //
+      println(this.userId)
       println("Estoy procesando una oferta, por lo tanto no puedo recibir mensajes")
       stash()
     case p:Petition => //Idem anterior
+      println(this.userId)
       stash()
     case msg=>
-      print("unbecome: ")
-      println(msg.toString)
-     /* val st = msg.toString
-      println (s"becomed $st")
-      sender ! matchThis(msg)*/
+     matchThis(msg,sender)
   }
 
 

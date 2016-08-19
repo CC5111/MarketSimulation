@@ -9,8 +9,6 @@ POST    /supplier                    controllers.SuppliersController.insertSuppl
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 GET /test               controllers.SuppliersController.test
-GET /test2               controllers.SuppliersController.test2
-GET /test3              controllers.SuppliersController.test3
 GET /run controllers.SuppliersController.run
 GET /drop controllers.SuppliersController.drop
 GET /usertest controllers.MarketsController.addTestUser
@@ -21,4 +19,8 @@ GET /testmarkets controllers.MarketsController.createTestMarkets
 GET /addMarket/:name/:desc controllers.MarketsController.addMarket(name: String, desc: String)
 GET /init   controllers.MarketsController.initGetMarkets
 GET /transactions   controllers.MarketsController.getTransactions
+
 GET /takeOffer/:marketId/:userId/:offerId controllers.MarketsController.takeOffer(marketId:Long,userId: Long, offerId: Long)
+GET /getOffers/:marketId   controllers.MarketsController.getOffers(marketId: Long)
+GET /createOffer/:userId/:marketId/:wantsProductId/:wantsAmount/:givesProductId/:givesAmount controllers.MarketsController.createOffer(userId: Long,marketId: Long, wantsProductId: Long, wantsAmount: Long, givesProductId: Long, givesAmount: Long)
+GET /getProducts/:userId/:marketId controllers.MarketsController.getProducts(userId:Long, marketId: Long)
