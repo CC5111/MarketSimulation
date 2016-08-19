@@ -35,6 +35,30 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
     }
 
   }
+
+  def calculateBienestar(products: Seq[Product]):Double={
+    var totalsum =0.0
+    products.foreach(
+    product =>
+      totalsum += product.productConstant*Math.pow(product.productQuantity,product.productExponential)
+
+    )
+    totalsum
+  }
+
+  def sendAllBienestar()= {
+    productDAO.all map{ x =>
+      var sumatory = 0.0
+      x.groupBy{_.id}.foreach( each =>
+      sumatory+= calculateBienestar(each._2)
+      )
+      context.actorSelection("/user/*/flowActor")! sumatory
+
+    }
+
+
+  }
+
   def receive = {
     case t:TakeOffer => {
       val oldSender = sender
@@ -43,8 +67,9 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
       (system.actorSelection(s"/user/market_$marketId/$userid") ? t).mapTo[Any].map { message =>
         println("YEAAAAAH " + message.toString)
         oldSender ! (message match {
-          case v:TransactionSuccessfully=>
-            Json.obj("status" ->"OK"  )
+          case v:TransactionSuccessfully=>{
+             sendAllBienestar()
+            Json.obj("status" ->"OK"  )}
           case v:TransactionError =>
             Json.obj("status" ->"KO","error" ->v.error)
           })
@@ -74,17 +99,8 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
             Json.obj("status" ->"KO","error" ->v.error)
         })
       }
-    case g:GetProducts =>
-      val oldSender = sender()
-      val userId = g.userId
-      println("get products market actor")
-      (system.actorSelection(s"/user/market_$marketId/$userId") ? g).mapTo[Any].map { message =>
-        println("YEAAAAAH " + message.toString)
-        oldSender ! (message match {
-          case seq:Seq[Product] =>
-            Json.obj("status" ->"OK", "content" -> Json.toJson(seq))
-        })
-      }
+
+
 
   }
 
