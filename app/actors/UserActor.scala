@@ -32,14 +32,10 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
     }
   }
   def processOffer(o: Offer) ={
-    println("me shego la oferta")
     val otherUserId= o.wantedUserId
     val product = Await.result(getUserProduct(userId,o.offProductId),1000 milli)
-    println("encontre el producto del usuario")
     if(product.productQuantity >= o.offAmount){
       become(waitingResponse)
-      println(s"el usuario tiene produsto $otherUserId")
-      println (context.actorSelection(s"../$otherUserId").toString())
       context.actorSelection(s"../$otherUserId") ! Petition(userId,o.offProductId,o)
 
     }
@@ -58,10 +54,8 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
 
 
   def processPetition(p: Petition):TransactionCompleted ={
-    println("intento de obtener el producto de este user")
     val user1product= Await.result(getUserProduct(p.userId,p.offer.offProductId),1000 milli)
     val user1otherProduct= Await.result(getUserProduct(p.userId,p.offer.wantedProductId),1000 milli)
-    println("intento de obtener el producto del otro user")
     val user2product =  Await.result(getUserProduct(userId,p.offer.offProductId),1000 milli)
     val user2otherProduct = Await.result(getUserProduct(userId,p.offer.wantedProductId),1000 milli)
     if(user1otherProduct == null | user1product == null |user2otherProduct == null | user2product == null){
@@ -69,7 +63,6 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
     }
     println(user2otherProduct)
     if(user2otherProduct.productQuantity >= p.amount){
-      println("el user tiene la cantidad buena")
             val product1 = user1product.copy(productQuantity = user1product.productQuantity - p.offer.offAmount)
             val product2 = user2otherProduct.copy(productQuantity = user2otherProduct.productQuantity - p.amount)
             val product3 = user2product.copy(productQuantity = user2product.productQuantity + p.offer.offAmount)
@@ -79,7 +72,6 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
             Await.result(multipleDAO.completeTransaction(product1,product2,product3,product4,newTransaction,p.offer).map{re =>  TransactionSuccessfully(p.offer.wantedUserId)},1000 milli)
     }
     else{
-      println("el user no tiene cantidad deseada")
       TransactionError(p.offer.wantedUserId,"el user no tiene cantidad deseada")
     }
 
@@ -90,7 +82,6 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
       println(c.userId+ "  "+ c.givesProductId )
       val offer = Offer(0, c.marketId, c.wantsProductId, c.wantsAmount, c.userId, c.givesProductId, c.givesAmount)
       val product = Await.result(getUserProduct(c.userId,c.givesProductId), 1000 milli)
-      println("encontre el producto del usuario")
       if (product.productQuantity >= c.givesAmount) {
         offerDAO.insert(offer).onSuccess {
           case o: Long => {
@@ -107,7 +98,6 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
       }
     }
     case p:GetProducts =>{
-      println("GetProducts")
       productDAO.byUser(userId) map {r => theSender ! r
 
       }}

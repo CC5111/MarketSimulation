@@ -1,13 +1,11 @@
-# play-slick-rest
-The Play Slick Rest is a very simple json rest api showing one way of using Play Framework 2.5 with [slick 3](https://github.com/slick/slick) library for database access.
+# Market-Simulation
+Simulacion de mercado de transaccion de bienes
 
+Pensado para:
 
-It supports the following features:
+* Enseñar oferta y demanda
+* Enseñar temas como utilidad marginal y tasa marginal de sustitucion
 
-* Generic Data Access Objects, create a DAOS with crud for an entity with just one line using DI
-* Models as case classes and slick models, independent from database driver and profile
-
-The project was thought to be used as an activator template.
 
 #Running
 
@@ -16,18 +14,16 @@ The database pre-configured is an h2, so you just have to:
 
         $ sbt run
 
-#Testing
-
-To run all tests (routes and persistence tests):
-
-
-        $ sbt test
-
 #Using
 
-	curl --request POST localhost:9000/supplier -H "Content-type: application/json" --data "{\"name\" : \"sup1\",\"desc\" : \"low prices\"}"
-
-	curl localhost:9000/supplier/1
+	Para probar todas las cosas, ver el archivo de routes.
+	Ej:
+	$http://localhost:9000/takeOffer/1/1/2
+	Usuario 1 toma oferta 2 del mercado 1
+	$http://localhost:9000/getOffers/1
+	Obtener las ofertas del mercado 1
+	$http://localhost:9000/getProducts/1/1
+	Obtener los productos del usuario uno del mercado 1
 
 #TODO
 
