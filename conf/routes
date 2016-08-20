@@ -24,5 +24,3 @@ GET /takeOffer/:marketId/:userId/:offerId controllers.MarketsController.takeOffe
 GET /getOffers/:marketId   controllers.MarketsController.getOffers(marketId: Long)
 GET /createOffer/:userId/:marketId/:wantsProductId/:wantsAmount/:givesProductId/:givesAmount controllers.MarketsController.createOffer(userId: Long,marketId: Long, wantsProductId: Long, wantsAmount: Long, givesProductId: Long, givesAmount: Long)
 GET /getProducts/:userId/:marketId controllers.MarketsController.getProducts(userId:Long, marketId: Long)
-
-GET     /socket                      controllers.MarketsController.socket

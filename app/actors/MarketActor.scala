@@ -37,6 +37,7 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
 
   }
 
+
   def calculateAllBienestar()= {
     productDAO.all map{ x =>
       var sumatory = 0
@@ -48,7 +49,8 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
 
     }
 
-  }
+
+
 
   def receive = {
     case t:TakeOffer => {
@@ -60,6 +62,7 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
         oldSender ! (message match {
           case v:TransactionSuccessfully=>
             system.actorSelection(s"/user/market_$marketId/graph") ! calculateAllBienestar()
+
             Json.obj("status" ->"OK"  )
           case v:TransactionError =>
             Json.obj("status" ->"KO","error" ->v.error)
@@ -90,8 +93,17 @@ class MarketActor(marketId: Long,name: String,userDAO: UserDAO,offerDAO:OfferDAO
             Json.obj("status" ->"KO","error" ->v.error)
         })
       }
-
-
+    case g:GetProducts =>
+      val oldSender = sender()
+      val userId = g.userId
+      println("get products market actor")
+      (system.actorSelection(s"/user/market_$marketId/$userId") ? g).mapTo[Any].map { message =>
+        println("YEAAAAAH " + message.toString)
+        oldSender ! (message match {
+          case seq:Seq[Product] =>
+            Json.obj("status" ->"OK", "content" -> Json.toJson(seq))
+        })
+      }
 
   }
 

@@ -151,7 +151,6 @@ abstract class  BaseDAO[T <: BaseTable[A], A <: BaseEntity]() extends AbstractBa
     def byMarket(marketId: Long): Future[Seq[Offer]] = {
       db.run(tableQ.filter(_.marketId === marketId).result)
     }
-
   }
   @Singleton
   class ProductDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvider) {

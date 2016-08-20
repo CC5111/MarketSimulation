@@ -3,14 +3,13 @@ package controllers
 import javax.inject._
 
 
-import actors.{GraphActor, MarketActor}
+import actors.MarketActor
 import actors.messages.MessagesActor.{GetProducts, CreateOffer, GetAllOffers, TakeOffer}
 import akka.actor.ActorSystem
 import models.daos._
 import models.entities.{User, Market, Supplier}
 import models.persistence.SlickTables.SuppliersTable
 import play.api.libs.json.{JsValue, Json, Writes}
-import play.api.libs.streams.ActorFlow
 import play.api.mvc._
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -90,9 +89,6 @@ class MarketsController @Inject()(userDAO: UserDAO,marketDAO: MarketDAO,offerDAO
     (system.actorSelection(s"/user/market_$marketId") ? GetProducts(userId)).mapTo[JsValue].map { message =>
       Ok(message)
     }
-  }
-  def socket = WebSocket.accept[JsValue, JsValue] { request =>
-    ActorFlow.actorRef(out => GraphActor.props(out))
   }
 
 }
