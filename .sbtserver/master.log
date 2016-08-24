@@ -711,3 +711,10 @@ Copy resource mappings:
 Total time: 1 s, completed 19-08-2016 22:46:46
 > server-post-command-cleanup
 > server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 71384@DiBadas logs at Fri Aug 19 23:46:35 CLT 2016, goodbye.

@@ -35,7 +35,7 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
     val otherUserId= o.wantedUserId
     val product = Await.result(getUserProduct(userId,o.offProductId),1000 milli)
     if(product.productQuantity >= o.offAmount){
-      become(waitingResponse)
+      becomeAndWatchTime(waitingResponse)
       context.actorSelection(s"../$otherUserId") ! Petition(userId,o.offProductId,o)
 
     }
@@ -52,6 +52,18 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
   }
   }
 
+  def becomeAndWatchTime( receive: Actor.Receive) ={
+    system.scheduler.scheduleOnce(5000 milliseconds) {
+      self ! TimeOutMsg()
+    }
+    become(receive)
+
+  }
+  def unbecomeAndUnstash(): Unit ={
+    unbecome()
+    unstashAll()
+  }
+
 
   def processPetition(p: Petition):TransactionCompleted ={
     val user1product= Await.result(getUserProduct(p.userId,p.offer.offProductId),1000 milli)
@@ -63,13 +75,17 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
     }
     println(user2otherProduct)
     if(user2otherProduct.productQuantity >= p.amount){
+            becomeAndWatchTime(waitingResponse)
             val product1 = user1product.copy(productQuantity = user1product.productQuantity - p.offer.offAmount)
             val product2 = user2otherProduct.copy(productQuantity = user2otherProduct.productQuantity - p.amount)
             val product3 = user2product.copy(productQuantity = user2product.productQuantity + p.offer.offAmount)
             val product4 = user1otherProduct.copy(productQuantity = user1otherProduct.productQuantity + p.amount)
 
             val newTransaction = Transaction(0,"test",p.userId,p.offer.offProductId,p.offer.offAmount,EconomyMath.RMS(product1,product4),this.userId,p.offer.wantedProductId,p.offer.wantedAmount,EconomyMath.RMS(product3,product2))
-            Await.result(multipleDAO.completeTransaction(product1,product2,product3,product4,newTransaction,p.offer).map{re =>  TransactionSuccessfully(p.offer.wantedUserId)},1000 milli)
+            Await.result(multipleDAO.completeTransaction(product1,product2,product3,product4,newTransaction,p.offer).map{re =>{
+
+              unbecomeAndUnstash()
+              TransactionSuccessfully(p.offer.wantedUserId)}},1000 milli)
     }
     else{
       TransactionError(p.offer.wantedUserId,"el user no tiene cantidad deseada")
@@ -117,9 +133,6 @@ class UserActor(userId: Long, offerDAO: OfferDAO,productDAO: ProductDAO,transact
         case Some(o) => //Existia esta oferta
           offerSender = (o.wantedUserId,sender)
           takeOfferSender = sender();
-          system.scheduler.scheduleOnce(5000 milliseconds) {
-            self ! TimeOutMsg()
-          }
           processOffer(o)
         case None => sender ! TransactionError(userId,"No existe oferta")
 
